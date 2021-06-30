@@ -12,8 +12,8 @@ namespace Калькулятор_на_Csharp
 {
     public partial class Calc : Form
     {
-        float a, b;
-        int count;
+        float first, second;
+        int countForSwitch;
         bool znak = true;
         public Calc()
         {
@@ -83,41 +83,41 @@ namespace Калькулятор_на_Csharp
 
         private void button13_Click(object sender, EventArgs e)
         {
-            a = float.Parse(textBox1.Text);
+            first = float.Parse(textBox1.Text);
             textBox1.Clear();
-            count = 1;
-            label1.Text = a.ToString() + "+";
+            countForSwitch = 1;
+            label1.Text = first.ToString() + "+";
             znak = true;
         }
 
         private void button14_Click(object sender, EventArgs e)
         {
-            a = float.Parse(textBox1.Text);
+            first = float.Parse(textBox1.Text);
             textBox1.Clear();
-            count = 2;
-            label1.Text = a.ToString() + "-";
+            countForSwitch = 2;
+            label1.Text = first.ToString() + "-";
             znak = true;
         }
 
         private void calculate()
         {
-            switch (count)
+            switch (countForSwitch)
             {
                 case 1:
-                    b = a + float.Parse(textBox1.Text);
-                    textBox1.Text = b.ToString();
+                    second = first + float.Parse(textBox1.Text);
+                    textBox1.Text = second.ToString();
                     break;
                 case 2:
-                    b = a - float.Parse(textBox1.Text);
-                    textBox1.Text = b.ToString();
+                    second = first - float.Parse(textBox1.Text);
+                    textBox1.Text = second.ToString();
                     break;
                 case 3:
-                    b = a * float.Parse(textBox1.Text);
-                    textBox1.Text = b.ToString();
+                    second = first * float.Parse(textBox1.Text);
+                    textBox1.Text = second.ToString();
                     break;
                 case 4:
-                    b = a / float.Parse(textBox1.Text);
-                    textBox1.Text = b.ToString();
+                    second = first / float.Parse(textBox1.Text);
+                    textBox1.Text = second.ToString();
                     break;
 
                 default:
@@ -158,19 +158,19 @@ namespace Калькулятор_на_Csharp
 
         private void button18_Click(object sender, EventArgs e)
         {
-            a = float.Parse(textBox1.Text);
+            first = float.Parse(textBox1.Text);
             textBox1.Clear();
-            count = 4;
-            label1.Text = a.ToString() + "/";
+            countForSwitch = 4;
+            label1.Text = first.ToString() + "/";
             znak = true;
         }
 
         private void button17_Click(object sender, EventArgs e)
         {
-            a = float.Parse(textBox1.Text);
+            first = float.Parse(textBox1.Text);
             textBox1.Clear();
-            count = 3;
-            label1.Text = a.ToString() + "*";
+            countForSwitch = 3;
+            label1.Text = first.ToString() + "*";
             znak = true;
         }
 

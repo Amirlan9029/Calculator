@@ -22,7 +22,7 @@ namespace Калькулятор_на_Csharp
 
         private void Calc_Load(object sender, EventArgs e)
         {
-                  
+
 
         }
 
@@ -152,6 +152,29 @@ namespace Калькулятор_на_Csharp
         }
 
         private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button18_Click(object sender, EventArgs e)
+        {
+            a = float.Parse(textBox1.Text);
+            textBox1.Clear();
+            count = 4;
+            label1.Text = a.ToString() + "/";
+            znak = true;
+        }
+
+        private void button17_Click(object sender, EventArgs e)
+        {
+            a = float.Parse(textBox1.Text);
+            textBox1.Clear();
+            count = 3;
+            label1.Text = a.ToString() + "*";
+            znak = true;
+        }
+
+        private void label1_Click_1(object sender, EventArgs e)
         {
 
         }

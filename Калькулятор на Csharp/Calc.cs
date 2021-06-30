@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Калькулятор_на_Csharp
@@ -22,13 +15,10 @@ namespace Калькулятор_на_Csharp
 
         private void Calc_Load(object sender, EventArgs e)
         {
-
-
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -104,26 +94,42 @@ namespace Калькулятор_на_Csharp
             switch (countForSwitch)
             {
                 case 1:
-                    second = first + float.Parse(textBox1.Text);
-                    textBox1.Text = second.ToString();
+                    adderer();      //сложение
                     break;
                 case 2:
-                    second = first - float.Parse(textBox1.Text);
-                    textBox1.Text = second.ToString();
+                    substractor();  //вычитание
                     break;
                 case 3:
-                    second = first * float.Parse(textBox1.Text);
-                    textBox1.Text = second.ToString();
+                    multiplier();  //умножение
                     break;
                 case 4:
-                    second = first / float.Parse(textBox1.Text);
-                    textBox1.Text = second.ToString();
+                    divisor();  //деление
                     break;
 
                 default:
                     break;
             }
 
+        }
+        public void adderer()
+        {
+            second = first + float.Parse(textBox1.Text);
+            textBox1.Text = second.ToString();
+        }
+        public void substractor()
+        {
+            second = first - float.Parse(textBox1.Text);
+            textBox1.Text = second.ToString();
+        }
+        public void multiplier()
+        {
+            second = first * float.Parse(textBox1.Text);
+            textBox1.Text = second.ToString();
+        }
+        public void divisor()
+        {
+            second = first / float.Parse(textBox1.Text);
+            textBox1.Text = second.ToString();
         }
         private void button3_Click(object sender, EventArgs e)
         {
@@ -153,7 +159,6 @@ namespace Калькулятор_на_Csharp
 
         private void label1_Click(object sender, EventArgs e)
         {
-
         }
 
         private void button18_Click(object sender, EventArgs e)
@@ -176,7 +181,6 @@ namespace Калькулятор_на_Csharp
 
         private void label1_Click_1(object sender, EventArgs e)
         {
-
         }
 
         private void button12_Click(object sender, EventArgs e)
